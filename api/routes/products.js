@@ -46,6 +46,12 @@ router.get('/', (req, res, next) => {
                         price: doc.price,
                         _id: doc._id,
                         category: doc.category,
+                        weight: doc.weight,
+                        cartDescription: doc.cartDescription,
+                        shortDescription: doc.shortDescription,
+                        longDescription: doc.longDescription,
+                        productOffer: doc.productOffer,
+                        stock: doc.stock,
                         productImage: 'http://localhost:4000/' + doc.productImage,
                         request: {
                             type: 'GET',
