@@ -7,21 +7,31 @@ This is an e-commerce backend development with authentication, product managemen
 ## Current routes
 **Users**
 > **POST** /signup
+
 > **POST** /login
+
 > **POST** /userDetails
 
 **Products**
 > **GET** /
+
 > **POST** /
+
 > **GET** /:productId
+
 > **PATCH** /:productId
+
 > **DELETE** /:productId
 
 **Orders**
 > **GET** /
+
 > **POST** /
+
 > **GET** /:orderId
+
 > **PATCH** /:orderId
+
 > **DELETE** /:orderId
 
 **Note** an updated documentation coming in short time.
