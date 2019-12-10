@@ -1,0 +1,19 @@
+{
+  "name": "product-server",
+  "version": "1.0.0",
+  "description": "An Express based Node API development project with MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farhanasif/product-server.git"
+  },
+  "author": "Md Farhan Asif",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farhanasif/product-server/issues"
+  },
+  "homepage": "https://github.com/farhanasif/product-server#readme"
+}
