@@ -33,7 +33,7 @@ const Product = require('../models/product');
 
 router.get('/', (req, res, next) => {
     Product.find()
-        .select('name price _id productImage')
+        .select('name price weight cartDescription shortDescription longDescription productOffer stock productImage _id')
         .populate('category', 'name description gender')
         .exec()
         .then(docs => {
@@ -68,6 +68,12 @@ router.post('/', checkAuth, upload.single('productImage'), (req, res, next) => {
         _id: mongoose.Types.ObjectId(),
         name: req.body.name,
         price: req.body.price,
+        weight: req.body.weight,
+        cartDescription: req.body.cartDescription,
+        shortDescription: req.body.shortDescription,
+        longDescription: req.body.longDescription,
+        productOffer: req.body.productOffer,
+        stock: req.body.stock,
         productImage: req.file.path,
         category: req.body.categoryId
     });
@@ -94,7 +100,7 @@ router.post('/', checkAuth, upload.single('productImage'), (req, res, next) => {
 router.get('/:productId', (req, res, next) => {
     const id = req.params.productId;
     Product.findById(id)
-        .select('name price _id')
+        .select('name price weight cartDescription shortDescription longDescription productOffer stock productImage _id')
         .populate('category', 'name description gender')
         .exec()
         .then(doc => {
