@@ -10,7 +10,6 @@ const orderRoutes = require('./api/routes/orders');
 const userRoutes = require('./api/routes/users');
 const categoryRoutes = require('./api/routes/categories');
 
-//console.log(process.env.DB_PASS);
 mongoose.connect(process.env.MONGO_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
 
